@@ -1,15 +1,10 @@
-//User input and output
+string message = "Find what is (inside the parentheses)";
 
-Console.Write("What is your name?: ");
-string name = Console.ReadLine();
+int openingPosition = message.IndexOf('(');
+int closingPosition = message.IndexOf(')');
 
-Console.Write("What is your age?: ");
-string age = Console.ReadLine();
+Console.WriteLine(openingPosition); 
+Console.WriteLine(closingPosition);
 
-Console.WriteLine($"Hello {name}, your age is {age} years old.");
-
-//Data types
-
-
-Console.WriteLine("42" + "1");     // Text concatenation: "421"
-Console.WriteLine(42 + 1);         // Math: 43
+int length = closingPosition - openingPosition;
+Console.WriteLine(message.Substring(openingPosition, length));
